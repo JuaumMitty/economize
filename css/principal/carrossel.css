@@ -1,0 +1,11 @@
+
+.carrossel__texto {
+    color: var(--branco);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    text-shadow: 0 5px 15px var(--sombra);
+
+}
+
+

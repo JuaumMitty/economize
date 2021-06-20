@@ -1,0 +1,54 @@
+.tela-dashboard{
+    margin: 60px auto 0 auto;
+    padding: 16rem 2.4rem;
+    max-width: calc(1200px - 2.4rem);
+
+}
+
+.dashboard__container:first-child {
+    padding-right: 1.5rem;
+}
+
+.dashboard__container:last-child{
+    padding-left: 1.5rem;
+}
+
+.dashboard__card{
+    background-color: var(--branco);
+    box-shadow: 0 5px 15px var(--sombra);
+    border-radius: 10px;
+    margin-bottom: 2.4rem;
+    padding: 2.4rem;
+}
+
+.dashboard__titulo{
+    color: var(--preto);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+    padding-bottom: 2.4rem;
+    margin-bottom: solid 1px var(--sombra);
+}
+
+.dashboard--icons{
+    color: var(--preto);
+    font-family: 'Material Icons', sans-serif;
+    font-size: 2.4rem;
+}
+
+.dashboard--icons > a {
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.dashboard--icons--vermelho, .dashboard--icons--amarelo {
+    transition: linear 0.1s;
+}
+
+.dashboard--icons--vermelho:hover{
+    color: var(--vermelho);
+}
+
+.dashboard--icons--amarelo:hover{
+    color: var(--amarelo);
+}

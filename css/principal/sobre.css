@@ -1,0 +1,27 @@
+.sobre__container{
+    margin: 16rem auto;
+}
+
+.sobre {
+    box-shadow: 0 5px 15px var(--sombra);
+    border-radius: 10px;
+}
+
+.sobre__container__titulo{
+    background-color: var(--azul_marinho);
+    border-radius: 10px 0 0 10px;
+    color: var(--branco);
+    font-family: 'Pacifico', sans-serif; 
+    font-size: 8rem;
+    padding: 7.2rem;
+}
+
+.sobre__container__conteudo{
+    background-color: var(--branco);
+    border-radius: 0 10px 10px 0;
+    color: var(--preto);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    padding: 2.4rem 3.2rem;
+    
+}

@@ -1,0 +1,103 @@
+.atualiza--contas{
+    margin: 60px auto 0 auto;
+    padding: 16rem 0;
+    max-width: 1200px;
+}
+
+.atualiza__card{
+    border-radius: 2px;
+    background-color: var(--branco);
+    box-shadow: 0 5px 15px var(--sombra);
+    color: var(--preto);
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.atualiza__container{
+    padding: 0 !important;
+}
+
+.atualiza__form{
+    padding: 2.4rem;
+    margin: 0;
+}
+
+.atualiza__form__descricao > input{
+    font-size: 2.2rem;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.atualiza__form__descricao, .atualiza__form__valor, .atualiza__form__data, .atualiza__form__categoria{
+    border-bottom: solid 1px var(--sombra);
+    margin-bottom: 2.4rem;
+}
+
+.atualiza__form__descricao, .atualiza__form__valor, .atualiza__form__data, .atualiza__form__categoria > label{
+    font-weight: 700;
+}
+.atualiza__form__input{
+    border: none;
+    outline: 0;
+}
+
+.atualiza__form__data > label{
+    margin-right: 1.6rem;
+}
+
+.atualiza__form__data > input{
+    max-width: 100%;
+}
+.atualiza__form__categoria > select{
+    width: 100%;
+}
+
+.atualiza__form__valor > div > input{
+    text-align: right;
+    margin: 0;
+    width: calc(100% - 50px);
+}
+
+.atualiza__form__botao{
+    padding: 0;
+    width: calc(100% - 1.2rem);
+
+}
+
+.atualiza__form__botao:first-child{
+    padding-right: 0.6rem;
+}
+
+.atualiza__form__botao:last-child{
+    padding-left: 0.6rem;
+}
+
+.atualiza__form__botao--azul{
+    background-color: var(--azul_marinho);
+    border: none;
+    border-radius: 5px;
+    color: var(--branco);
+    font-weight: 700;
+    height: 50px;
+    margin-left: 1.2rem;
+}
+
+.atualiza__form__botao--vermelho{
+    background-color: var(--branco);
+    border: solid 1px var(--vermelho);
+    border-radius: 5px;
+    color: var(--vermelho);
+    font-weight: 700;
+    height: 50px;
+}
+
+.atualiza__form__botao--azul, .atualiza__form__botao--vermelho {
+    margin: 0;
+    width: 100%;
+
+}
+
+.atualiza__gastos{
+    border-bottom: solid 10px var(--amarelo);
+}

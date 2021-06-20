@@ -1,0 +1,15 @@
+.hero {
+    background: url('../../img/fundo_paisagem.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+.hero__titulo {
+    color: var(--branco);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 7.2rem;
+    text-align: center;
+}

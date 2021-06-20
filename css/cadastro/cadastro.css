@@ -1,0 +1,80 @@
+.tela-cadastro {
+    background: url('../../img/fundo_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    margin-top: 60px;
+}
+
+.form--centralizar {
+    margin: 16rem auto;
+}
+
+.form__cadastro{
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 2.4rem;
+    box-shadow: 0 5px 15px var(--sombra);
+}
+
+.form__titulo {
+    color: var(--preto);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+    
+}
+
+.form__item{
+    margin-top: 2.4rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    border-bottom: solid 1px var(--sombra);
+}
+
+.form__item:active {
+    border-bottom: solid 1px var(--azul_marinho);
+}
+
+.form__item > label{
+    font-weight: 700;
+}
+
+.form__item > input {
+    border: none;
+    outline: 0;
+
+}
+
+.form__nome{
+    width: calc(100% - 60px);
+}
+
+.form__sobrenome{
+    width: calc(100% - 100px)
+}
+
+.form__email{
+    width: calc(100% - 60px);
+}
+
+.form__senha{
+    width: calc(100% - 60px)
+}
+
+.form__confirma{
+    width: calc(100% - 180px);
+}
+
+.form__botao{
+    background-color: var(--azul_marinho);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px var(--sombra);
+    color: var(--branco);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    height: 50px;
+    margin-top: 2.4rem;
+    text-align: center;
+    width: 100%;
+}

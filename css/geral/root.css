@@ -1,0 +1,12 @@
+:root {
+    --branco: #FFFFFF;
+    --preto: #4D4D4D;
+    --azul_marinho: #49858F;
+    --sombra: rgba(0, 0, 0, 0.25);
+    --vermelho: #C73E35;
+    --amarelo: #E0B82A;
+    --pacifico: 'Pacifico', sans-serif;
+    --nunito: 'Nunito', sans-serif; 
+    font-size: 62.5% !important;
+}
+

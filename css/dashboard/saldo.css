@@ -1,0 +1,32 @@
+.saldo {
+    border-bottom: solid 10px var(--azul_marinho);
+}
+
+.saldo__tabela {
+    color: var(--preto);
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.saldo__tabela__titulo {
+    padding-bottom: 2.4rem;
+    font-size: 2rem;
+}
+
+.saldo__tabela__valor {
+    padding-bottom: 2.4rem;
+    text-align: right;
+}
+
+.saldo__tabela__titulo--total{
+    font-size: 2rem;
+}
+
+.saldo__tabela__valor--total{
+    text-align: right;
+}
+hr {
+    background-color: var(--preto);
+    margin-bottom: 2.4rem;
+    border: none;
+}

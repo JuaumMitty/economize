@@ -1,0 +1,30 @@
+.rodape {
+    background-color: #EFEFEF;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem;
+}
+
+.rodape__texto--copyright {
+    font-family: 'Material Icons', sans-serif;
+    font-size: 0.9rem;
+}
+
+.rodape__texto {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+}
+
+.rodape__icons {
+    font-size: 1.8rem;
+    color: var(--preto);
+    text-decoration: none;
+    padding-left: 16px;
+    transition: linear 0.1s;
+}
+
+.rodape__icons:hover {
+    color: var(--azul_marinho);
+}

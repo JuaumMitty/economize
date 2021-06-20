@@ -1,0 +1,90 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Icone cabeçalho -->
+        <link rel="icon" type="image/png" href="img/economize-icon.png"/>
+        <title>Economize | Cadastro</title>
+        <!-- Fonts: Font Awesome, Material Icon e Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <!-- Bootstrap v5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        
+        <!-- CSS modular -->
+        <link rel="stylesheet" type="text/css" href="css/geral/root.css">
+        <link rel="stylesheet" type="text/css" href="css/geral/menu.css">
+        <link rel="stylesheet" type="text/css" href="css/cadastro/cadastro.css">
+        <link rel="stylesheet" type="text/css" href="css/geral/rodape.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <div class="menu__content">
+                <a href="index.html"><img src="img/economize-logo.png"></a>
+            </div>
+            <div class="menu__content">
+                <ul class="menu__items">
+                    <li class="menu__items__lista"><a class="menu__items--texto" href="index.html">Home</a></li>
+                    <div class="menu__items--separador"></div>
+                    <li class="menu__items__lista"><a class="menu__items--texto" href="login">Login</a></li>
+                    <div class="menu__items--separador"></div>
+                    <li class="menu__items__lista"><a class="menu__items--texto"  href="sobre">Sobre</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="tela-cadastro">
+            <section class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-7  form--centralizar">
+                        <form class="form__cadastro" action="php/usuario/cadastrar.php" method="POST">
+                            <h1 class="form__titulo">Cadastro</h1>
+                            <div class="form__item">
+                                <label for="nome">Nome:</label>
+                                <input class="form__nome" type="text" name="nome">
+                            </div>
+                            <div class="form__item">
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input class="form__sobrenome" type="text" name="sobrenome">
+                            </div>
+                            <div class="form__item">
+                                <label for="email">E-mail:</label>
+                                <input class="form__email" type="text" name="email">
+                            </div>
+                            <div class="form__item">
+                                <label for="senha">Senha:</label>
+                                <input class="form__senha" type="password" name="senha">    
+                            </div>
+                            <div class="form__item">
+                                <label for="confirmasenha">Confirmação da senha:</label>
+                                <input class="form__confirma" type="password" name="confirma_senha">    
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <input class="form__botao" type="submit" value="Finalizar cadastro" name="btn-cadastrar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="rodape">
+            <div>
+                <p class="rodape__texto"><b class="rodape__texto--copyright">copyright</b> Todos os direitos reservados | 2021</p>
+            </div>
+            <div>
+                <a href="https://github.com/JuaumMitty"><i class="fab fa-github-square rodape__icons"></i></a>
+                <a href="https://www.linkedin.com/in/juaummitty/"><i class="fab fa-linkedin rodape__icons"></i></a>    
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+        <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

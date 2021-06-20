@@ -1,0 +1,123 @@
+.container__vetor{
+    position: relative;
+
+}
+
+
+.vetor {
+    background: url('../../img/figura_login.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 653px;
+    position: absolute;
+    top: -80px;
+    right: -90px;
+    width: 710px;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 1400px) {
+    .vetor {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .vetor {
+        width: 610px;
+    }
+}
+
+
+.login--alinhamento{
+    padding-top: 6rem !important;
+}
+
+.login {
+    margin: 16rem auto 22rem auto;
+}
+
+.login__paragrafo{
+    color: var(--branco);
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    position: absolute;
+    top: 0.8rem;
+}
+
+.login__titulo{
+    color: var(--branco);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 7.2rem;
+    text-align: center;
+    position: relative;
+}
+
+.login__form {
+    margin: 0;
+    padding: 0;
+}
+
+.login__input{
+    color: var(--preto);
+    background-color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px var(--sombra);
+    font-size: 1.6rem;
+    height: 60px;
+    margin-bottom: 2.4rem;
+    padding: 2.4rem;
+    outline: 0;
+}
+
+.login__linha_cadastro{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login__cadastro {
+    color: var(--branco);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login__cadastro:hover {
+    color: whitesmoke;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.login__botao{
+    color: var(--branco);
+    background-color: var(--azul_marinho);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px var(--sombra);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 50px;
+    width: 100%;
+}
+
+.login__botao:hover {
+    opacity: 0.9;
+}
+
+.login__botao, .login__cadastro{
+    transition: linear 0.2s;
+}
+
+.login__imagem{
+    background-image: url('../../img/mulher_notebook.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 60px 60px 0 var(--azul_marinho);
+    height: 420px;
+    width: 378px;
+}

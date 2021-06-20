@@ -1,0 +1,38 @@
+.gastos__tabela {
+    color: var(--preto);
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+}
+
+.gastos__tabela__titulo{
+    font-size: 2rem;
+}
+
+.gastos__tabela__valor > b {
+    font-size: 1.4rem;
+}
+
+.gastos__tabela__titulo, .gastos__tabela__data {
+    padding-bottom: 2.4rem;
+}
+
+.gastos__tabela__icones, .gastos__tabela__valor {
+    text-align: right;
+    padding-bottom: 2.4rem;
+}
+
+.gastos__teste{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.gastos__teste::-webkit-scrollbar {
+    width: 8px;            /* width of the entire scrollbar */
+  }
+  
+  .gastos__teste::-webkit-scrollbar-thumb {
+    background-color: var(--sombra);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid var(--branco);  /* creates padding around scroll thumb */
+}

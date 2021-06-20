@@ -1,0 +1,35 @@
+.botoes > div{
+    margin: 0 !important;
+    padding: 0 !important;
+ }
+
+.botoes__container {
+    color: var(--branco);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    width: calc(100% - 0.6rem);
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0 5px 15px var(--sombra);
+}
+
+.botoes__vermelho {
+    background-color: var(--vermelho);
+    margin-left: 0.6rem;
+}
+
+.botoes__azul {
+    margin-right: 0.6rem;
+    background-color: var(--azul_marinho);
+}
+
+.botoes__azul, .botoes__vermelho {
+    transition: linear 0.1s;
+
+}
+
+.botoes__azul:hover, .botoes__vermelho:hover {
+    opacity: 0.8;
+}
