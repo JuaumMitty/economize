@@ -29,14 +29,14 @@
         <link rel="stylesheet" type="text/css" href="css/dashboard/tabela_gastos/atualiza.css">
         <link rel="stylesheet" type="text/css" href="css/dashboard/tabela_gastos/despeza.css">
         <link rel="stylesheet" type="text/css" href="css/dashboard/tabela_gastos/receita.css">
-        <link rel="stylesheet" type="text/css" href="css/dashboard/tabela_gastos/deletar.css">
-
+        <link rel="stylesheet" type="text/css" href="css/dashboard/tabela_gastos/deletar.css">       
     </head>
     <body>
         <?php
             //Conexão com banco de dados
             include_once 'php/db_config/db_conecta.php';
             include_once 'php/actions/calculaTotal.php';
+            include_once 'php/actions/filtraPorCategoria.php';
             //include_once 'php/usuario/login.php';
             // Sessão
             //session_start();
@@ -115,6 +115,7 @@
                                                             <option value="Alimentação">Alimentação</option>
                                                             <option value="Lazer">Lazer</option>
                                                             <option value="Salário">Salário</option>
+                                                            <option value="Cartão de crédito">Cartão de crédito</option>
                                                             <option value="Outros">Outros</option>
                                                         </select>
                                                     </div>
@@ -165,10 +166,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Modal item -->
-
-
                             <?php 
                                 }
                             ?>
@@ -208,9 +205,11 @@
                         </table>
                     </section>
                     <section class="row justify-content-center align-items-center dashboard__card distribuicao">
-                        <h1 class="dashboard__titulo">Distribuição de renda mensal</h1>
+                        <h1 class="dashboard__titulo">Gastos por categoria</h1>
                         <hr>
-                        <p>Gráfico que não sei como fazer ;-;</p>
+                        <div class="distribuicao__grafico">
+                            <canvas id="myChart"></canvas>
+                        </div>
                     </section>
                 </div>
             </div>  
@@ -249,6 +248,7 @@
                                         <option value="Alimentação">Alimentação</option>
                                         <option value="Lazer">Lazer</option>
                                         <option value="Salário">Salário</option>
+                                        <option value="Cartão de crédito">Cartão de crédito</option>
                                         <option value="Outros">Outros</option>
                                     </select>
                                 </div>
@@ -296,6 +296,7 @@
                                         <option value="Alimentação">Alimentação</option>
                                         <option value="Lazer">Lazer</option>
                                         <option value="Salário">Salário</option>
+                                        <option value="Cartão de crédito">Cartão de crédito</option>
                                         <option value="Outros">Outros</option>
                                     </select>
                                 </div>
@@ -320,12 +321,47 @@
             </div>
         </div>
 
-        
-        
-        <!-- Modais -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const data = {
+                labels: [
+                    'Contas fixas',
+                    'Alimentação',
+                    'Lazer',
+                    'Outros',
+                    'Cartão de crédito'
+                ],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [
+                        <?php echo $contas_fixas['Contas Fixas']; ?>,<?php echo $alimentacao['Alimentacao']; ?>,<?php echo $lazer['Lazer']; ?>,<?php echo $outros['Outros']; ?>,<?php echo $cartao['Cartao']; ?>
+                    ],
+                    backgroundColor: [
+                    '#E0B82A',
+                    '#7363BD',
+                    '#6BC2D1',
+                    '#4D4D4D',
+                    '#C73E35',
+                    ],
+                    hoverOffset: 4
+                }]
+                };
+                // </block:setup>
+
+                // <block:config:0>
+                const config = {
+                type: 'pie',
+                data: data,
+                };
+                // </block:config>
+                var myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                );
+        </script>
+        <script type="text/javascript" src="scripts/script.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="scripts/script.js"></script>
         <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>

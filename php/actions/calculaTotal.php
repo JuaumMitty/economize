@@ -1,5 +1,6 @@
 <?php
-// Soma total de receitas
+            
+            // Soma total de receitas
             $sql_somaReceita = "SELECT SUM(valor) as 'totalReceita' FROM gastos WHERE tipo='add';";
             $resultado_receita = mysqli_query($conecta, $sql_somaReceita);
             $receita = mysqli_fetch_array($resultado_receita);
