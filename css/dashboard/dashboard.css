@@ -36,6 +36,14 @@
     font-size: 2.4rem;
 }
 
+.dashboard--icons__add{
+    color: var(--azul_marinho);
+}
+
+.dashboard--icons__remove{
+    color: var(--vermelho);
+}
+
 .dashboard--icons > a {
     text-decoration: none;
     color: var(--preto);

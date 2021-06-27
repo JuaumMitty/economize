@@ -15,7 +15,12 @@
             $converteDespeza = floatval($despeza['totalDespeza']);
             $formataDespeza = number_format($converteDespeza, 2, ',', '.');
 
-            //Calcula total
+            //Calcula total com formatação
             $total = number_format(($converteReceita - $converteDespeza), 2, ',', '.');
+            
+            // Fecha conexão com banco de dados
+            $resultado_receita -> close();
+            $resultado_despeza -> close();
+            
 
 ?>

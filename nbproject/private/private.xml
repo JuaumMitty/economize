@@ -4,10 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/Economize/index.html</file>
-            <file>file:/C:/xampp/htdocs/Economize/php/usuario/cadastrar.php</file>
             <file>file:/C:/xampp/htdocs/Economize/php/usuario/login.php</file>
+            <file>file:/C:/xampp/htdocs/Economize/css/dashboard/dashboard.css</file>
             <file>file:/C:/xampp/htdocs/Economize/dashboard.php</file>
             <file>file:/C:/xampp/htdocs/Economize/cadastro.html</file>
+            <file>file:/C:/xampp/htdocs/Economize/php/actions/calculaTotal.php</file>
         </group>
     </open-files>
 </project-private>

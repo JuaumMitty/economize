@@ -37,13 +37,7 @@
             include_once 'php/db_config/db_conecta.php';
             include_once 'php/actions/calculaTotal.php';
             include_once 'php/actions/filtraPorCategoria.php';
-            //include_once 'php/usuario/login.php';
-            // Sessão
-            //session_start();
-            //if(isset($_SESSION['menssagem'])){
-            //    echo $_SESSION['mensagem'];
-            //}
-            //session_unset();
+
         ?>
         <nav class="menu">
             <div class="menu__content">
@@ -67,9 +61,8 @@
                         <div class="gastos__teste">
                             <hr>
                             <?php 
-                                $select = "SELECT * FROM gastos;";
+                                $select = "SELECT id, descricao, valor, date_format(data,'%d/%m/%Y') as 'data', categoria, tipo FROM gastos order by data;";
                                 $resultado_select = mysqli_query($conecta, $select);
-                                
                                 while($dados = mysqli_fetch_array($resultado_select)){
                             ?>
                             <table class="gastos__tabela">
@@ -83,7 +76,7 @@
                                 </tr>
                                 <tr>
                                     <td class="gastos__tabela__data"><?php echo $dados['data']; ?></td>
-                                    <td class="gastos__tabela__valor"><b class="dashboard--icons"><?php echo $dados['tipo']; ?></b> R$ <?php echo number_format($dados['valor'], 2, ',', '.') ?></td>
+                                    <td class="gastos__tabela__valor"><b class="dashboard--icons dashboard--icons__<?php echo $dados['tipo']; ?>"><?php echo $dados['tipo']; ?></b> R$ <?php echo number_format($dados['valor'], 2, ',', '.') ?></td>
                                 </tr>
                             </table>
                             <hr>
@@ -100,17 +93,17 @@
                                                 <input type="hidden" name="tipo" value="<?php echo $dados['tipo']; ?>">
                                                 <div class="row justify-content-center align-items-center">
                                                     <div class="col atualiza__form__descricao atualiza__container">
-                                                        <input class="atualiza__form__input" name="descricao" type="text" placeholder="Descrição do pagamento" value="<?php echo $dados['descricao']; ?>">
+                                                        <input class="atualiza__form__input" name="descricao" type="text" placeholder="Descrição do pagamento" value="<?php echo $dados['descricao']; ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-between align-items-end">
                                                     <div class="col-md-6 atualiza__form__data atualiza__container">
                                                         <label for="data">Data:</label>
-                                                        <input class="atualiza__form__input" name="data" type="date" value="<?php echo $dados['data']; ?>">
+                                                        <input class="atualiza__form__input" name="data" type="date" value="<?php echo $dados['data']; ?>" required>
                                                     </div>
                                                     <div class="col-md-5 atualiza__form__categoria atualiza__container">
-                                                        <select class="atualiza__form__input" name="categoria">
-                                                            <option>Categoria</option>
+                                                        <select class="atualiza__form__input" name="categoria" required>
+                                                            <option value="<?php echo $dados['categoria']?>" selected><?php echo $dados['categoria']?></option>
                                                             <option value="Contas fixas">Contas Fixas</option>
                                                             <option value="Alimentação">Alimentação</option>
                                                             <option value="Lazer">Lazer</option>
@@ -123,7 +116,7 @@
                                                 <div class="row justify-content-between align-items-center atualiza__form__valor">
                                                     <div class="col-md-12 atualiza__container">
                                                         <label>Valor:</label>
-                                                        <input class="atualiza__form__input" type="text" name="valor" value="<?php echo $dados['valor']; ?>">
+                                                        <input class="atualiza__form__input" type="text" name="valor" value="<?php echo $dados['valor']; ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-between align-items-center">
@@ -168,6 +161,8 @@
                             </div>
                             <?php 
                                 }
+                                
+                                $resultado_select -> close();
                             ?>
                             
                         </div>
@@ -233,16 +228,16 @@
                         <form class="atualiza__form" action="php/crud/create.php" method="POST">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col atualiza__form__descricao atualiza__container">
-                                    <input class="atualiza__form__input" name="descricao" type="text" placeholder="Descrição do pagamento">
+                                    <input class="atualiza__form__input" name="descricao" type="text" placeholder="Descrição do pagamento" required>
                                 </div>
                             </div>
                             <div class="row justify-content-between align-items-end">
                                 <div class="col-md-6 atualiza__form__data atualiza__container">
                                     <label for="data">Data:</label>
-                                    <input class="atualiza__form__input" name="data" type="date">
+                                    <input class="atualiza__form__input" name="data" type="date" required>
                                 </div>
                                 <div class="col-md-5 atualiza__form__categoria atualiza__container">
-                                    <select class="atualiza__form__input" name="categoria" value="Categoria">
+                                    <select class="atualiza__form__input" name="categoria" value="Categoria" required>
                                         <option>Categoria</option>
                                         <option value="Contas fixas">Contas Fixas</option>
                                         <option value="Alimentação">Alimentação</option>
@@ -256,7 +251,7 @@
                             <div class="row justify-content-between align-items-center atualiza__form__valor">
                                 <div class="col-md-12 atualiza__container">
                                     <label>Valor:</label>
-                                    <input class="atualiza__form__input" type="text" name="valor">
+                                    <input class="atualiza__form__input" type="text" name="valor" required> 
                                 </div>
                             </div>
                             <div class="row justify-content-between align-items-center">
@@ -281,16 +276,16 @@
                         <form class="atualiza__form" action="php/crud/create.php" method="POST">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col atualiza__form__descricao atualiza__container">
-                                    <input class="atualiza__form__input" name="descricao" type="text" placeholder="Descrição do pagamento">
+                                    <input class="atualiza__form__input" name="descricao" type="text" placeholder="Descrição do pagamento" required>
                                 </div>
                             </div>
                             <div class="row justify-content-between align-items-end">
                                 <div class="col-md-6 atualiza__form__data atualiza__container">
                                     <label for="data">Data:</label>
-                                    <input class="atualiza__form__input" name="data" type="date">
+                                    <input class="atualiza__form__input" name="data" type="date" required>
                                 </div>
                                 <div class="col-md-5 atualiza__form__categoria atualiza__container">
-                                    <select class="atualiza__form__input" name="categoria" value="Categoria">
+                                    <select class="atualiza__form__input" name="categoria" value="Categoria" required>
                                         <option>Categoria</option>
                                         <option value="Contas fixas">Contas Fixas</option>
                                         <option value="Alimentação">Alimentação</option>
@@ -304,7 +299,7 @@
                             <div class="row justify-content-between align-items-center atualiza__form__valor">
                                 <div class="col-md-12 atualiza__container">
                                     <label>Valor:</label>
-                                    <input class="atualiza__form__input" type="text" name="valor">
+                                    <input class="atualiza__form__input" type="text" name="valor" required>
                                 </div>
                             </div>
                             <div class="row justify-content-between align-items-center">
